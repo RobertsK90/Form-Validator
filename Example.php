@@ -8,9 +8,7 @@ use FormValidator\DatabaseWrapper\Database;
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $db = new Database;
-    $errorHandler = new ErrorHandler;
-    $validator = new Validator($db, $errorHandler);
+    $validator = new Validator(new Database, new ErrorHandler);
 
     $validation = $validator->validate($_POST, [
         'username' => 'required|maxlength:25|minlength:3|unique:users',
