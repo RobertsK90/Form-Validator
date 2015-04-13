@@ -7,10 +7,10 @@ namespace FormValidator\DatabaseWrapper;
 use PDOException;
 
 class Database {
-    private $host = 'localhost';
-    private $db = 'validation';
-    private $username = 'root';
-    private $password = 'q1w2e3r4t5';
+    private $host = '[host]';
+    private $db = '[db]';
+    private $username = '[username]';
+    private $password = '[password]';
 
     protected $table;
     protected $stmt;
